@@ -12,7 +12,6 @@ export default function main() {
       push(ResultList(formatTime(new Date().toString())));
     } else {
       if (!Number.isNaN(number.valueOf())) {
-        console.log("xxxxx")
         push(ResultList(formatTime(new Date(number.valueOf()).toString())))
       } else {
         const dTime = dayjs(time);
@@ -72,7 +71,7 @@ export default function main() {
         </ActionPanel>
       }
     >
-      <Form.TextField id="time" defaultValue="now" placeholder="Enter timestamp, datetime string, or 'now'." />
+      <Form.TextField id="time" defaultValue="now" placeholder="Enter timestamp, datetime string ' YYYY-MM-dd HH:mm:ss', or 'now'." />
     </Form>
   );
 }
