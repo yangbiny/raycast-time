@@ -29,12 +29,21 @@ export default function main() {
   }
 
   function formatTime(time: string) {
-    const dTime = dayjs(time);
+    const dOTime = dayjs(time)
+    const dTime = dayjs(time).toDate()
+
+    var month = dOTime.month() < 10 ? "0" + (dOTime.month() + 1) : dOTime.month() + 1
+    var day = dOTime.date() < 10 ? "0" + dOTime.date() : dOTime.date()
+    var hour = dOTime.hour() < 10 ? "0" + dOTime.hour() : dOTime.hour()
+    var min = dOTime.minute() < 10 ? "0" + dOTime.minute() : dOTime.minute()
+
+    var sec = dOTime.second() < 10 ? "0" + dOTime.second() : dOTime.second()
     return [
-      dTime.format("YYYY-MM-DD hh:mm:ss").toString(),
-      dTime.format().toString(),
+      dTime.getFullYear() + "-" + month + "-" + day + " " + hour + ":" + min + ":" + sec,
+      dOTime.format("YYYY-MM-DD hh:mm:ss").toString(),
+      dOTime.format().toString(),
       dTime.valueOf().toString(),
-      dTime.unix().toString(),
+      dOTime.unix().toString(),
     ];
   }
 
