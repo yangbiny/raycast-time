@@ -40,7 +40,7 @@ export default function main() {
     var sec = dOTime.second() < 10 ? "0" + dOTime.second() : dOTime.second()
     return [
       dTime.getFullYear() + "-" + month + "-" + day + " " + hour + ":" + min + ":" + sec,
-      dOTime.format("YYYY-MM-DD hh:mm:ss").toString(),
+      //dOTime.format("YYYY-MM-DD hh:mm:ss").toString(),
       dOTime.format().toString(),
       dTime.valueOf().toString(),
       dOTime.unix().toString(),
