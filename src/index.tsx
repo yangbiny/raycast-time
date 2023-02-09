@@ -32,7 +32,7 @@ export default function main() {
     const dOTime = dayjs(time)
     const dTime = dayjs(time).toDate()
 
-    var month = dOTime.month() < 10 ? "0" + (dOTime.month() + 1) : dOTime.month() + 1
+    var month = dOTime.month() < 9 ? "0" + (dOTime.month() + 1) : dOTime.month() + 1
     var day = dOTime.date() < 10 ? "0" + dOTime.date() : dOTime.date()
     var hour = dOTime.hour() < 10 ? "0" + dOTime.hour() : dOTime.hour()
     var min = dOTime.minute() < 10 ? "0" + dOTime.minute() : dOTime.minute()
